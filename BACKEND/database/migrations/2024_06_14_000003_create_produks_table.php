@@ -18,10 +18,11 @@ return new class extends Migration {
             $table->text('deskripsi');
             $table->decimal('harga', 15, 2);
             $table->integer('stok')->default(0);
-            $table->string('gambar')->nullable(); // Path ke gambar produk
+            $table->string('gambar')->nullable();
             $table->timestamps();
         });
     }
+
     /**
      * Reverse the migrations.
      */

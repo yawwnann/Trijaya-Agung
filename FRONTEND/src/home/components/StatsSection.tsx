@@ -3,8 +3,8 @@ import React from "react";
 const stats = [
   {
     icon: null,
-    title: "KON",
-    desc: "",
+    title: "2.000+",
+    desc: "Produk Terjual",
     highlight: false,
   },
   {
@@ -14,13 +14,11 @@ const stats = [
     highlight: false,
   },
   {
-    icon: <span className="text-yellow-400 text-xl">★</span>,
     title: "4.9/5",
     desc: "Rating Pelanggan",
     highlight: false,
   },
   {
-    icon: <span className="text-xl mr-1">🛠️</span>,
     title: "Produk Berkualitas",
     desc: "Standar Mutu Sesuai SNI & ISO.",
     highlight: true,
@@ -35,7 +33,7 @@ const StatsSection: React.FC = () => (
           key={i}
           className="flex flex-col items-center justify-center py-4 px-2 text-center min-h-[90px]"
         >
-          {item.icon && <div className="mb-1">{item.icon}</div>}
+          {item.icon && <div className="mb-1">{item}</div>}
           <span
             className={`text-white text-lg md:text-xl font-bold ${
               item.highlight ? "flex items-center justify-center" : ""

@@ -35,7 +35,7 @@ class KategoriProdukSeeder extends Seeder
             for ($i = 1; $i <= 3; $i++) {
                 $produkNama = $kategori . ' Produk ' . $i;
                 $gambarUrl = $this->getPixabayImage($kategori);
-                $cloudinaryUrl = $this->uploadToCloudinary($gambarUrl);
+                $cloudinaryUrl = $this->uploadToCloudinary($gambarUrl) ?? 'https://via.placeholder.com/300';
                 Produk::create([
                     'kategori_produk_id' => $kategoriModel->id,
                     'nama' => $produkNama,

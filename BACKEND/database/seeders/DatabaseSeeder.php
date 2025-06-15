@@ -19,8 +19,15 @@ class DatabaseSeeder extends Seeder
             'name' => 'Admin',
             'email' => 'admin@gmail.com',
             'password' => bcrypt('passwor123'),
+            'role' => 'admin',
         ]);
 
-        $this->call(KategoriProdukSeeder::class);
+        // Seeder tambahan
+        $this->call([
+            UserProfileSeeder::class,
+            AddressSeeder::class,
+            KategoriProdukSeeder::class,
+            OrderSeeder::class,
+        ]);
     }
 }
